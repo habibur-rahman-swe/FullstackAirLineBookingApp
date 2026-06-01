@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: user1
       POSTGRES_PASSWORD: password1
-      POSTGRES_DB: airline_booking  # Optional: creates a default database with the same name as the user
+      POSTGRES_DB: hrairline_db  # Optional: creates a default database with the same name as the user
     ports:
       - "5432:5432"
     volumes:
