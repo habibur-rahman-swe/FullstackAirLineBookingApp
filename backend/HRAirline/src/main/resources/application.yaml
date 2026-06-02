@@ -27,6 +27,23 @@ spring:
     init:
       mode: always
       platform: postgres
+  mail:
+    host: mail.i2gether.com
+    port: 475
+    username: habibur@i2gether.com
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
 server:
   port: 8082
 
@@ -34,4 +51,4 @@ app:
   jwt:
     # Fallback key used only for local development; always override in production
     secret-key: ${JWT_SECRET:474bd3d5f84b191febd7dfe467831f7801ce7f0e0403723225917a6764bb190f}
-    expiration-ms: 1*24*60*60*1000L # 24 hours in milliseconds
+    expiration-ms: 86400000 # 24 hours in milliseconds
