@@ -52,3 +52,6 @@ app:
     # Fallback key used only for local development; always override in production
     secret-key: ${JWT_SECRET:474bd3d5f84b191febd7dfe467831f7801ce7f0e0403723225917a6764bb190f}
     expiration-ms: 86400000 # 24 hours in milliseconds
+  url:
+    viewBooking: http://localhost:3000/my-bookings
+    login: http://localhost:3000/login

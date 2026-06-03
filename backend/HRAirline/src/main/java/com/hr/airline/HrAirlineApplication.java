@@ -9,10 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import jakarta.mail.internet.MimeMessage;
 
 @SpringBootApplication
+@EnableAsync
 public class HrAirlineApplication {
 
 	@Autowired
