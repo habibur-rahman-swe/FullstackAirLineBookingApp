@@ -22,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 public class RoleServiceImpl implements RoleService {
 
 	public final RoleRepo roleRepo;
+	
 	public final ModelMapper modelMapper;
 
 	@Override
