@@ -1,2 +1,6 @@
 /.metadata/
 bin/
+
+# frontend dependencies and build
+frontend/airline-frontend/node_modules/
+frontend/airline-frontend/build/
