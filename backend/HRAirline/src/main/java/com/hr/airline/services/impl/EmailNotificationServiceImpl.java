@@ -74,6 +74,8 @@ public class EmailNotificationServiceImpl implements EmailNotificationService {
 	}
 
 	@Override
+	@Transactional
+	@Async
 	public void sendWelcomeEmail(User user) {
 		log.info("Sending welcome email to user: {}", user.getEmail());
 

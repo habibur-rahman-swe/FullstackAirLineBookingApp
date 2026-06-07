@@ -2,7 +2,7 @@ spring:
   application:
     name: HRAirline
   datasource:
-    url: jdbc:postgresql://localhost:5432/hrairline_db
+    url: jdbc:postgresql://localhost:5432/hr_airline_db
     username: user1
     password: password1
     driver-class-name: org.postgresql.Driver

@@ -41,13 +41,17 @@ public class SecurityFilter {
                 .authorizeHttpRequests(req->
                         req.requestMatchers("/api/auth/**", 
                         					"/api/airports/**", 
-                        					"/api/flights/**").permitAll()
+                        					"/api/flights/**",
+                        					// Swagger/OpenAPI
+                                            "/v3/api-docs/**",
+                                            "/swagger-ui/**",
+                                            "/swagger-ui.html"
+                        					).permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement(mag-> mag.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 
         return httpSecurity.build();
-
     }
 	
     @Bean
